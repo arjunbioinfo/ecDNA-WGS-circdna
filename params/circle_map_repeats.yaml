@@ -1,0 +1,11 @@
+# nf-core/circdna 1.1.0 -- Circle-Map Repeats branch
+# Detects repetitive eccDNA. Optimised for Circle-seq/ATAC; usable on WGS with
+# caution. Run: ./run.sh circle_map_repeats
+input: assets/samplesheet_bam.csv
+input_format: BAM
+outdir: results/circle_map_repeats
+genome: GRCh38
+circle_identifier: circle_map_repeats
+max_cpus: 16
+max_memory: 128.GB
+max_time: 240.h

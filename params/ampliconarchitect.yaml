@@ -1,0 +1,15 @@
+# nf-core/circdna 1.1.0 -- AmpliconArchitect branch
+# Amplified ecDNA detection from WGS (the validated WGS branch).
+# Run:  ./run.sh ampliconarchitect
+# Requires (injected by run.sh from env.sh, NOT stored here):
+#   --aa_data_repo  --mosek_license_dir
+input: assets/samplesheet_bam.csv
+input_format: BAM
+outdir: results/ampliconarchitect
+genome: GRCh38
+circle_identifier: ampliconarchitect
+reference_build: GRCh38     # must match genome/fasta and the AA data repo build
+aa_cngain: 4.5              # copy-number threshold for AA seeds
+max_cpus: 16
+max_memory: 128.GB
+max_time: 240.h

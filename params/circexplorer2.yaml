@@ -1,0 +1,11 @@
+# nf-core/circdna 1.1.0 -- CIRCexplorer2 branch
+# Detects circular junctions. Optimised for Circle-seq/ATAC; usable on WGS with
+# caution. Run: ./run.sh circexplorer2
+input: assets/samplesheet_bam.csv
+input_format: BAM
+outdir: results/circexplorer2
+genome: GRCh38
+circle_identifier: circexplorer2
+max_cpus: 16
+max_memory: 128.GB
+max_time: 240.h
