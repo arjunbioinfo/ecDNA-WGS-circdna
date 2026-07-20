@@ -1,0 +1,35 @@
+name: CI
+
+# Lint/validate the wrapper on every push. The full pipeline needs a Mosek
+# license, the AA data repo, and containers, so it can't run in CI -- but this
+# proves the params files, samplesheets, and branch names are well-formed and
+# that Nextflow is available to launch nf-core/circdna 1.1.0.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install PyYAML
+        run: pip install pyyaml==6.0.2
+
+      - name: Validate params + samplesheets
+        run: python ci/validate.py
+
+      - name: Install Nextflow
+        uses: nf-core/setup-nextflow@v2
+
+      - name: Nextflow available
+        run: nextflow -version
