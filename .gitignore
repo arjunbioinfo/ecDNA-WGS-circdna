@@ -1,0 +1,24 @@
+# --- Never commit licensed / large / data files ---
+# AmpliconArchitect data repository, Mosek license, containers (your tsd_transfer)
+aa_data_repo/
+*aa_data_repo*/
+mosek/
+mosek.lic
+*.lic
+containers/
+*.sif
+*.img
+
+# Local, machine-specific environment (paths to tsd_transfer resources)
+env.sh
+
+# Sequencing data & pipeline outputs
+*.bam
+*.bai
+*.cram
+*.fastq.gz
+*.fq.gz
+work/
+results/
+.nextflow*
+*.log
