@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "ecDNA-WGS-circdna: reproducible ecDNA detection from whole-genome sequencing"
+abstract: >-
+  A version-pinned, config-driven wrapper around nf-core/circdna for detecting extrachromosomal circular DNA (ecDNA) and other circular DNA from whole-genome sequencing.
+type: software
+authors:
+  - family-names: Thippana
+    given-names: Mallikarjuna
+repository-code: "https://github.com/arjunbioinfo/ecDNA-WGS-circdna"
+url: "https://arjunbioinfo.github.io/"
+license: MIT
+keywords:
+  - bioinformatics
+  - ecdna
+  - nextflow
+  - nf-core
+  - whole-genome-sequencing
+  - cancer-genomics

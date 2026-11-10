@@ -1,6 +1,7 @@
 # ecDNA-WGS-circdna
 
 [![CI](https://github.com/arjunbioinfo/ecDNA-WGS-circdna/actions/workflows/ci.yml/badge.svg)](https://github.com/arjunbioinfo/ecDNA-WGS-circdna/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A reproducible wrapper around [**nf-core/circdna** v1.1.0](https://nf-co.re/circdna/1.1.0)
 for detecting **extrachromosomal circular DNA (ecDNA)** and other circular DNA
